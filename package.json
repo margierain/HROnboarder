@@ -4,7 +4,8 @@
   "description": "An API portal to view, create and Update tasks and Send an Email to the admin when the task is due",
   "main": "index.js",
   "scripts": {
-    "test": "mocha server/test --timeout=10000"
+    "test": "mocha server/test --exit",
+    "start": "nodemon index.js"
   },
   "repository": {
     "type": "git",
