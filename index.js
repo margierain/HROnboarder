@@ -20,6 +20,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/task', task.getTasks);
+app.post('/task', task.postTask);
 
 
 app.listen(port, () => {

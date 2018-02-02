@@ -9,4 +9,18 @@ function getTasks(req, res) {
   })
 }
 
-module.exports = { getTasks };
+
+function postTask(req, res) {
+
+  var newOnboard = new onboarderSchema(req.body);
+  newOnboard.save((err, onboard) => {
+    if (err) {
+      res.status(400).send(err);
+    }
+    else {
+      res.status(201).json({ message: "Onboarder details created successfully", onboard });
+    }
+  });
+}
+
+module.exports = { getTasks, postTask };
