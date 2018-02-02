@@ -1,0 +1,3 @@
+{
+  "dbHost": "mongodb://testdb:godwin@ds121238.mlab.com:21238/onboardingtestdb"
+}
