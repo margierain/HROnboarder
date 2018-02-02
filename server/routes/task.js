@@ -23,4 +23,13 @@ function postTask(req, res) {
   });
 }
 
-module.exports = { getTasks, postTask };
+function updateTask(req, res) {
+  onboarderSchema.findById({ _id: req.params.id }, (err, task) => {
+    Object.assign(task, req.body).save((err, task) => {
+      if (err) res.status(500).send(err);
+      res.status(200).json({ message: 'Onboarder details updated successfully', task })
+    })
+  })
+}
+
+module.exports = { getTasks, postTask, updateTask };
