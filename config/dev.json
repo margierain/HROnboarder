@@ -1,3 +1,4 @@
 {
-  "dbHost": "mongodb://onboarding:godwin@ds221258.mlab.com:21258/onboarder"
+  "dbHost": "mongodb://onboarding:godwin@ds221258.mlab.com:21258/onboarder",
+  "SENDGRID_API_KEY": "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"
 }

@@ -2,6 +2,7 @@ let express = require('express');
 let mongoose = require('mongoose');
 let bodyParser = require('body-parser');
 let config = require('config');
+const sendEmail = require('./server/routes/sendEmail');
 let task = require('./server/routes/task');
 let app = express();
 const port = 5000;
@@ -22,6 +23,7 @@ app.get('/', (req, res) => {
 app.get('/task', task.getTasks);
 app.post('/task', task.postTask);
 
+console.log(sendEmail);
 
 app.listen(port, () => {
   console.log(`API running on port ${port}`)
